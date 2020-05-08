@@ -3,5 +3,8 @@
 - Contains Tests for Absolute Math Function
 - Contains Jenkins Screenshot
 - Contains API Test for Link
-- Contains Log file
+- Contains Log file for JSON
+
+# Author 
+Tamer Algarmakany
 
