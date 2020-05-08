@@ -1,8 +1,14 @@
 "Test for Api"
+import logging
 import unittest
 import requests
+import json
 
-class TestMathFunction(unittest.TestCase):
+logging.basicConfig(
+    filename="test.log", level=logging.INFO, format="%(levelname)s:%(message)s"
+)
+
+class TestApi(unittest.TestCase):
     "Class to test Api"
     def test_api(self):
         "Tests for the api"
@@ -12,14 +18,14 @@ class TestMathFunction(unittest.TestCase):
         status_code = test.status_code
         expected = 200
         data = test.json()
+        logging.info("Json Data" + str(data))
+
 
         status = data["status"]
         status_message = "success"
 
         self.assertEqual(status_code, expected)
         self.assertEqual(status, status_message)
-
-
 
 
 if __name__ == '__main__':
