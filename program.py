@@ -39,6 +39,8 @@ class TestMathFunction(unittest.TestCase):
             my_fabs({})
         with self.assertRaises(TypeError):
             my_fabs([])
+        with self.assertRaises(TypeError):
+            my_fabs("Wrong String")
 
 
 
